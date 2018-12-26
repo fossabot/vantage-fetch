@@ -34,6 +34,9 @@ const config = {
   api: {
     url: "https://dog.ceo/api/breeds",
     loginUrl: "https://dog.ceo",
+    headers: {
+      ...e.g Authorization etc
+    }
     endpoints: {
       list: "/list/all",
       random: "/image/random",

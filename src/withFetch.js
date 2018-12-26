@@ -30,12 +30,16 @@ const withFetch = config => WrappedComponent => {
         //Gets the params data
         const { options } = config(this.props);
         const { endpoint } = options;
-
         //gets the default endpoint from the props
         let url = endpoint;
         const { api } = this.props.config;
         //Calls the server from the endpoint
-        const res = await axios.get(`${api.url}${url}`);
+        //const res = await axios.get(`${api.url}${url}`);
+        const res = await axios({
+          method: "get",
+          url: `${api.url}${url}`,
+          headers: { ...api.headers }
+        });
         //Filters the data
         const { data, status, statusText } = res;
         const network = { status, statusText };
@@ -55,7 +59,13 @@ const withFetch = config => WrappedComponent => {
       try {
         const { api } = this.props.config;
         //Calls the server from the endpoint
-        const res = await axios.get(`${api.url}${endpoint}`);
+        //const res = await axios.get(`${api.url}${endpoint}`);
+        const res = await axios({
+          method: "get",
+          url: `${api.url}${endpoint}`,
+          headers: { ...api.headers }
+        });
+
         //Filters the data
         const { data, status, statusText } = res;
         const network = { status, statusText };

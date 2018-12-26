@@ -22,7 +22,8 @@ const withMutation = config => WrappedComponent => {
         const res = await axios({
           method,
           url: `${api.url}${url}`,
-          data: qs.stringify(body)
+          data: qs.stringify(body),
+          headers: { ...api.headers }
         });
 
         //Filters the payload data from the server
@@ -44,7 +45,8 @@ const withMutation = config => WrappedComponent => {
         const res = await axios({
           method,
           url: `${api.url}${endpoint}`,
-          data: qs.stringify(body)
+          data: qs.stringify(body),
+          headers: { ...api.headers }
         });
         //Filters the payload data from the server
         const { data, status } = res;

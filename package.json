@@ -1,6 +1,6 @@
 {
   "name": "vantage-fetch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React utility HTTP client for higher-order components.",
   "author": "vacom",
   "license": "MIT",
