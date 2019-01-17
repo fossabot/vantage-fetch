@@ -3,6 +3,7 @@
 Inspired by the definitions of GraphQL, such as Mutation, this library offers a simple HTTP client based on HOCs. Provides a way to reduce boilerplate when working with request notably with an API in REST. Simple and easy to integrate with just one configuration, you can have almost the same capabilities as a "GraphQL API", for example: injection of the endpoint data in the props, loading state and finally refetch function. This library has two main HOCs, withFetch and withMutation and others as utility form. Below is explained in more detail.
 
 ![Vantage-auth](http://i65.tinypic.com/snjdkg.jpg)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvacom%2Fvantage-fetch.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvacom%2Fvantage-fetch?ref=badge_shield)
 
 ## installation
 
@@ -406,3 +407,7 @@ import { withProps } from "vantage-fetch";
 
 withProps({ sample: "Sample Prop" })(Component);
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvacom%2Fvantage-fetch.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvacom%2Fvantage-fetch?ref=badge_large)
